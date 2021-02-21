@@ -56,10 +56,16 @@ function calculating_age(age) {
   }
 
 function calculating_gossips(gossips) {
-    if (gossips == 0.85 || gossips == 0.9) {
-        result += 500 * gossips;
-    } else if (gossips == 200) {
-        result -= 200;
+    switch (gossips) {
+        case 0.85:
+            result *= 0.85;
+            break;
+        case 0.9:
+            result *= 0.9;
+            break;
+        case 200:
+            result -= 200;
+            break;
     }
 }
 
